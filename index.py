@@ -32,12 +32,14 @@ class RelatorioIMC:
             for _, row in dados_tratados.iterrows(): 
 
                 nome_completo = row['Primeiro Nome'] + ' ' + row['Sobrenomes'] 
-                
+
                 imc = self.calcular_imc(row['Altura (m)'], row['Peso (kg)']) 
                 imc_str = '{:.2f}'.format(imc).replace('.', ',') 
 
                 linha = f'{nome_completo} {imc_str}\n' 
                 relatorio.write(linha)     
 
+relatorio = RelatorioIMC('DATASET.csv') 
+relatorio.gerar_relatorio('relatorio.txt')
 
     

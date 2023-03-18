@@ -40,6 +40,6 @@ class RelatorioIMC:
                 relatorio.write(linha)     
 
 relatorio = RelatorioIMC('DATASET.csv') 
-relatorio.gerar_relatorio('EvertonWallaceMachadoDeOliveira.txt')
+relatorio.gerar_relatorio('relatorio.txt')
 
     
